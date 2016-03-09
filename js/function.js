@@ -6,11 +6,7 @@
 
 --------------------------------------------------------------*/
 var Slide = function(el){
-	this.initiallize(el);
-};
-Slide.prototype = {
-	initiallize : function(el){
-		this.$el = $(el);
+	this.$el = $(el);
 		this.li_current = 0;
 		this.li_next = 0;
 		this.timer;
@@ -27,8 +23,9 @@ Slide.prototype = {
 		this.$slide_count_li;//まるポチの数用
 		this.initialSet();
 		this.handleEvents();
-	},
-
+};
+Slide.prototype = {
+	
 	initialSet: function(el){
 		this.setCountBtn();
 		this.setArrowBtn();
